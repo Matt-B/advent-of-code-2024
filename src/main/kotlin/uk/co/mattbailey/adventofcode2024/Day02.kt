@@ -18,14 +18,12 @@ class Day02 {
             val report = line.split(" ").map { it.toInt() }
             val reportSafety = isSafe(report)
             if (reportSafety) {
-                println("$report - Report is safe with no removals")
                 numberOfSafeReports += 1
             } else {
                 for ((index, number) in report.withIndex()) {
                     val reportWithoutNumber = report.toMutableList()
                     reportWithoutNumber.removeAt(index)
                     if (isSafe(reportWithoutNumber)) {
-                        println("$report - report is safe without number $number")
                         numberOfSafeReports += 1
                         break
                     }

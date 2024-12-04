@@ -17,7 +17,6 @@ class Day02Test {
     @Test
     fun `Part 1 - Can solve provided example`() {
         val answer = Day02().solvePart1(exampleInput)
-        println(answer)
         assert(answer == 2)
     }
 
